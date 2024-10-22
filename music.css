@@ -31,6 +31,36 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* General container styling */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Keeps content centered on large screens */
+    margin: 0 auto; /* Centers the container */
+    padding: 20px; /* Adds padding inside the container */
+    box-sizing: border-box; /* Ensures padding doesn't increase container width */
+}
+
+/* Responsive grid layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjust number of columns based on screen size */
+    grid-gap: 20px; /* Space between grid items */
+}
+
+/* Flexbox layout container */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Wraps items to the next line if they don’t fit */
+    justify-content: space-between; /* Evenly space out items */
+}
+
+/* Container for mobile devices */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Smaller padding on mobile */
+    }
+}
+
 /* Burger meniu */
 .burger-menu {
   display: none; 
