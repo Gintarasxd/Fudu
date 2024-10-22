@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    title>Burger Menu Example</title>
+    <title>Burger Menu and Lentvaris Example</title>
     <style>
         /* General styles */
         body {
+            background-image: url('https://lt2.pigugroup.eu/colours/390/786/88/39078688/delione-clementoni-high-quality-collection-ruduo-31820-kaina_reference.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
+        h1 {
+            color: white;
+            font-size: 24px;
+        }
+
         nav ul {
-            list-style: none;
+            list-style-type: none;
             display: flex;
             gap: 1rem;
             padding: 0;
@@ -36,9 +45,15 @@
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-weight: bold;
             font-size: 18px;
         }
 
+        nav ul li a:hover {
+            color: #f4f4f4;
+        }
+
+        /* Burger menu styles */
         .burger-menu {
             display: none; 
             flex-direction: column;
@@ -51,22 +66,30 @@
         .burger-menu .line {
             width: 100%;
             height: 3px;
-            background-color: #fff;
+            background-color: white;
             border-radius: 2px;
         }
 
-        /* Responsive styles for smaller screens */
+        /* Responsive styles */
         @media (max-width: 768px) {
             nav ul {
-                display: none; /* Hide the menu in mobile view */
+                display: none; /* Hide the menu by default in mobile view */
                 flex-direction: column;
                 gap: 1rem;
                 position: absolute;
                 top: 60px;
                 right: 20px;
-                background-color: #333;
+                background-color: rgba(0, 0, 0, 0.8);
                 padding: 1rem;
                 border-radius: 8px;
+                width: 200px;
+                transition: transform 0.3s ease-in-out;
+                transform: translateX(100%);
+            }
+
+            nav.active ul {
+                display: flex;
+                transform: translateX(0); /* Slide in the menu */
             }
 
             .burger-menu {
@@ -76,23 +99,19 @@
                 right: 20px;
                 z-index: 10;
             }
-
-            nav.active ul {
-                display: flex; /* Show the menu when active */
-            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Responsive Navigation</h1>
+    <h1>Sveiki Atvyke i Lentvari</h1>
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">Apie</a></li>
+            <li><a href="#history">Istorija</a></li>
+            <li><a href="#gallery">Galerija</a></li>
+            <li><a href="#contact">Lokacija</a></li>
         </ul>
     </nav>
     <div class="burger-menu" id="burger-menu">
@@ -102,242 +121,48 @@
     </div>
 </header>
 
+<section id="about">
+    <h2>Apie Lentvarį</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Lentvaris_Palace_in_the_19th_century.jpg" alt="Lentvaris Palace">
+    <p>Lentvaris yra gražus miestelis Lietuvoje, garsėjantis vaizdingais kraštovaizdžiais ir turtinga istorija.</p>
+</section>
+
+<section id="history">
+    <h2>Istorija</h2>
+    <div class="iframe-container">
+        <iframe src="https://www.youtube.com/embed/WEkhgkidGRo?si=RdsuWdz9ONoJbHwL" title="Lentvaris Video" allowfullscreen></iframe>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2>Galerija</h2>
+    <p>Lentvario Ežeras</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Image-Lithuania_Lentvaris_Lake_and_Palace.jpg/1280px-Image-Lithuania_Lentvaris_Lake_and_Palace.jpg" alt="Lentvario Ežeras">
+</section>
+
+<section id="contact">
+    <h2>Lokacija</h2>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18468.306298222666!2d25.0227055!3d54.647348!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ddf2a5684cd7bd%3A0xa00d18ec9ba8130!2sLentvaris%2C%20Trak%C5%B3%20r.%20sav.!5e0!3m2!1slt!2slt!4v1729340148138!5m2!1slt!2slt" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Lentvaris. All rights reserved.</p>
+</footer>
+
 <script>
     const burgerMenu = document.getElementById('burger-menu');
     const nav = document.querySelector('nav');
 
     burgerMenu.addEventListener('click', function() {
-        nav.classList.toggle('active');
+        nav.classList.toggle('active'); // Toggle the menu visibility on click
     });
 </script>
 
 </body>
 </html>
-    <title>Lentvaris</title>
-    <link rel="stylesheet" href="saitas.css">
-    <style>
-        body {
-            background-image: url('https://lt2.pigugroup.eu/colours/390/786/88/39078688/delione-clementoni-high-quality-collection-ruduo-31820-kaina_reference.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: Arial, sans-serif;
-        }
 
-        h1, h2 {
-            color: white;
-            text-align: center;
-        }
-
-        header {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 10px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            text-align: center;
-        }
-
-        nav ul li {
-            display: inline-block;
-            margin: 10px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            color: #f4f4f4;
-        }
-
-        section {
-            padding: 20px;
-            margin-bottom: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 8px;
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .iframe-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-        }
-
-        .iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .map-container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        #scrollToTopBtn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        @media screen and (max-width: 768px) {
-            .map-container iframe {
-                width: 100%;
-                height: 300px;
-            }
-
-            nav ul li {
-                display: block;
-                margin: 5px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-      
-    <script>
-        function showAlert() {
-            alert('Sveiki Atvyke i puslapi apie Letvari ! :-)');
-        }
-
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-        document.addEventListener("DOMContentLoaded", function() {
-            var navItems = document.querySelectorAll('nav ul li a');
-            navItems.forEach(function(item) {
-                item.addEventListener('click', changeColorToBlue);
-            });
-        });
-        </script>  
-</style>    
-    <header>
-        <h1>Sveiki Atvyke i Lentvari</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">apie</a></li>
-                <li><a href="#history">Istorja</a></li>
-                <li><a href="#gallery">Galerija</a></li>
-                <li><a href="#contact">Lokacija</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="about">
-            
-        <h2>Apie Lentvari</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Lentvaris_Palace_in_the_19th_century.jpg" alt="">
-            <div class="container">
-        <p>Lentvaris yra gražus miestelis Lietuvoje, garsėjantis vaizdingais kraštovaizdžiais ir turtinga istorija.</p>
-        <button onclick="showAlert()">Click me!</button>
-    </section>
-
-    <section id="history">
-            <title>YouTube Video Embed</title>
-           <p>Lentvaris video</p>
- 
-</head>
-<body>
-
-        <div class="iframe-container">
-        <iframe id="video-frame" src="https://www.youtube.com/embed/WEkhgkidGRo?si=RdsuWdz9ONoJbHwL" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-</body>
-</html>
-            <p>Istorija
-            <div class="container">
-                <p>Iki XIX a. Lentvaris arba Landvarovo buvo nedidelis kaimas. 1596 m. minimas Lentvoriškių dvaras.
-
-                    1838 m. Lentvario kaime buvo 14 kiemų. Miestelis pradėjo augti, kai pro jį buvo 1861–1862 m. nutiesta Sankt Peterburgo-Varšuvos geležinkelio atšaka į Virbalį ir pastatyta aukščiausios klasės stotis su specialiomis salėmis ir apartamentais carui. Išsiplėtė geležinkelininkų miestelis, pastatyta Lentvario geležinkelio stotis. 1862 m. gruodį pradėtas traukinių eismas. Geležinkelio atsiradimas paskatino smulkių gamyklėlių ir amatininkų dirbtuvių atsiradimą. Miestelyje pagyvėjo prekyba. Grafo Juzefo Tiškevičiaus iniciatyva pastatytas vinių fabrikas, kurio produkcija turėjo didelę paklausą. Gyvenvietėje buvo pastatyti namai, kuriuose apgyvendinti geležinkelio darbininkai ir konduktoriai (pirmoji šios gyvenvietės gatvė ir pavadinta Konduktorių). Augo gyventojų skaičius, atsirado būtinybė įsteigti mokyklą.</p>
-    </section>
-
-    <section id="gallery">
-            <h2>Gallery</h2>
-            <p>Nuotrauku galerija </p>
-            <p>Lentvario Ezeras </p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Image-Lithuania_Lentvaris_Lake_and_Palace.jpg/1280px-Image-Lithuania_Lentvaris_Lake_and_Palace.jpg" alt="">
-        <p>Gelezinkelio gatve</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Lentvariogelezinkeliogatve.JPG" alt="">
-    </section>
-        <p>Lentvario Dvaras</p>
-        <img src="https://s1.15min.lt/static/cache/OTcweDU4MCw4MzR4NTQwLDYxNjI0NixvcmlnaW5hbCwsaWQ9MTI1NzMwMCZkYXRlPTIwMTQlMkYxMSUyRjEzLDM1MzkyNDkxNjY=/lentvario-dvaras-kestutis-fedirka-54645f1212816.jpg" alt="">
-    <section id="contact">
-            <div class="container">
-        <h2>Lokacija</h2>
-            <p>Get in touch with us to learn more about Lentvaris...</p>
-            <styles>
-
-                <!DOCTYPE html>
-                <html lang="en">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Google Map Embed</title>
-                    <style>
-                      
-                       
-
-                    </style>
-                </head>
-                <body>
-                   
-        <div class="map-container">
-                        <iframe id="map-frame" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18468.306298222666!2d25.0227055!3d54.647348!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ddf2a5684cd7bd%3A0xa00d18ec9ba8130!2sLentvaris%2C%20Trak%C5%B3%20r.%20sav.!5e0!3m2!1slt!2slt!4v1729340148138!5m2!1slt!2slt" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-                </body>
-                </html>
-
-            </style>
-    </main>
-    <footer>
-        <p>&copy; 2024 Lentvaris. All rights reserved.</p>
-    </footer>
-
-    <button onclick="scrollToTop()" id="scrollToTopBtn">Up</button>
-
-    <script>
-        function showAlert() {
-            alert('Sveiki atvykę į puslapį apie Lentvarį!');
-        }
-
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
-
-</body>
-</html>        </style>
-                </head>
-                <body>   
-                   
-                    </body>
-                </html>
 
 
