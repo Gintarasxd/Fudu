@@ -51,6 +51,29 @@ nav ul li a {
 }
 
 
+/* Paryškinimas per hover */
+nav ul li a:hover {
+    background-color: #f4f4f4; /* Fonas pakeičiamas į šviesesnę spalvą */
+    color: #333; /* Teksto spalva tampa tamsesnė */
+    padding: 5px 10px; /* Pridedamas šiek tiek užpildo aplink tekstą */
+    border-radius: 5px; /* Apvalūs kampai */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Animacija, kad efektas būtų švelnus */
+}
+
+/* Aktyvus paryškinimas (pasirinktam elementui) */
+nav ul li.active a {
+    background-color: #333; /* Paryškintas fonas */
+    color: white; /* Tekstas tampa baltas */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Paryškinimas per fokusą (naudingas klaviatūros naudotojams) */
+nav ul li a:focus {
+    outline: 2px solid #333; /* Išorinis rėmelis */
+    background-color: #ddd;
+    color: black;
+}
 
 
 /* Responsive grid layout */
