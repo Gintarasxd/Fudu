@@ -186,10 +186,11 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a 3D effect */
 }
 
-/* Change background color on hover */
 #scrollToTopBtn:hover {
-    background-color: #green; /* Darker background on hover */
+    background-color: green; /* Use a valid color name */
 }
+
+
 
 /* Media query for mobile responsiveness */
 @media (max-width: 768px) {
