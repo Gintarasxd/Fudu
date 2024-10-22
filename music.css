@@ -1,4 +1,22 @@
-/* Bendras stilius */
+
+
+header {
+    background: rgba(51, 51, 51, 0.5); 
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    flex-shrink: 0;
+    max-width: auto;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4; 
@@ -7,23 +25,64 @@ body {
     text-align: center; 
 }
 
-header {
-    background: rgba(51, 51, 51, 0.5); 
-    color: greenyellow;
-    padding: 1rem 0;
-    text-align: center;
+
+
+
+header h1 {
+    margin: 0;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
 }
+
+   
+main {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    margin: 20px; 
+}
+
+
+@media (max-width: 320px) {
+    .main {
+        padding: 10px; 
+        font-size: 14px; 
+    }
+}
+
+
+@media (min-width: 321px) and (max-width: 500px) {
+    .main {
+        padding: 15px; 
+        font-size: 16px; 
+    }
+}
+
+
+@media (min-width: 501px) and (max-width: 768px) {
+    .main {
+        padding: 20px; 
+        font-size: 18px; 
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .main {
+        padding: 30px; 
+        font-size: 20px; 
+    }
+}
+
+    
 
 nav ul li {
     display: inline;
+    margin: 0 0.5rem;
 }
 
 nav ul li a {
@@ -31,73 +90,73 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* General container styling */
 .container {
-    width: 100%;
-    max-width: 1200px; /* Keeps content centered on large screens */
-    margin: 0 auto; /* Centers the container */
-    padding: 20px; /* Adds padding inside the container */
-    box-sizing: border-box; /* Ensures padding doesn't increase container width */
-}
-
-.container {
-    padding: 20px;
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 10px; /* Less padding for small screens */
-    }
-}
-
-
-/* Paryškinimas per hover */
-nav ul li a:hover {
-    background-color: #f4f4f4; /* Fonas pakeičiamas į šviesesnę spalvą */
-    color: #333; /* Teksto spalva tampa tamsesnė */
-    padding: 5px 10px; /* Pridedamas šiek tiek užpildo aplink tekstą */
-    border-radius: 5px; /* Apvalūs kampai */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Animacija, kad efektas būtų švelnus */
-}
-
-/* Aktyvus paryškinimas (pasirinktam elementui) */
-nav ul li.active a {
-    background-color: #333; /* Paryškintas fonas */
-    color: white; /* Tekstas tampa baltas */
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-/* Paryškinimas per fokusą (naudingas klaviatūros naudotojams) */
-nav ul li a:focus {
-    outline: 2px solid #333; /* Išorinis rėmelis */
-    background-color: #ddd;
-    color: black;
-}
-
-
-/* Responsive grid layout */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjust number of columns based on screen size */
-    grid-gap: 20px; /* Space between grid items */
-}
-
-/* Flexbox layout container */
-.flex-container {
+    flex: 1;
     display: flex;
-    flex-wrap: wrap; /* Wraps items to the next line if they don’t fit */
-    justify-content: space-between; /* Evenly space out items */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 1rem 0;
 }
 
-/* Container for mobile devices */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px; /* Smaller padding on mobile */
+
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: rgba(51, 51, 51, 0.5); 
+    color: #fff;
+    flex-shrink: 0;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+  .iframe-container {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
     }
-}
 
-/* Burger meniu */
+
+   #video-frame {
+        width: 80%;       
+        height: 80vh;       
+        border: 3px solid red;  
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+   }
+   
+
+
+
+ #scrollToTopBtn {
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     background-color: #333;
+     color: #fff;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 50px;
+     cursor: pointer;
+     font-size: 16px;
+ }
+ 
+ #scrollToTopBtn:hover {
+     background-color:green;
+ }
+
 .burger-menu {
   display: none; 
   flex-direction: column;
@@ -110,7 +169,7 @@ nav ul li a:focus {
 .burger-menu .line {
   width: 100%;
   height: 3px;
-  background-color: #fff;
+  background-image: linear-gradient(135deg, #923cb5 0%, #00009f 50%, #1c7efb 100%);
   border-radius: 2px;
 }
 
@@ -129,7 +188,7 @@ nav ul li a:focus {
 
   nav.active {
       display: block;
-      background-color: rgba(51, 51, 51, 0.8); 
+      background-color: transparent; 
       position: absolute;
       top: 60px; 
       right: 10px;
@@ -140,109 +199,97 @@ nav ul li a:focus {
 
   nav ul {
       flex-direction: column;
-      gap: 10px;
+      gap: 10px; 
   }
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
 
 }
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: rgba(51, 51, 51, 0.5);
-    color: white;
-}
-
-
-#scrollToTopBtn {
-     position: fixed;
-     bottom: 20px;
-     right: 20px;
-     background-color: green;
-     color: #fff;
-     border: none;
-     padding: 10px 20px;
-     border-radius: 50px;
-     cursor: pointer;
-     font-size: 16px;
- }
  
- #scrollToTopBtn:hover {
-     background-color:#28a745;
 
+.leaves-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
 
-/* Media query for mobile responsiveness */
-@media (max-width: 768px) {
-    #scrollToTopBtn {
-        padding: 10px; /* Smaller padding for mobile devices */
-        font-size: 16px; /* Smaller font size for mobile */
+.leaf {
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    background: url('https://iy.delfi.lt/norm/99899/4356448_IiMiiX.jpeg') no-repeat center/contain;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(100vh);
     }
 }
 
-/* General body styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Light background for contrast */
-    text-align: center; /* Center align text */
+  #map-frame {
+        width: 60vh;        
+        height: 55vh;       
+        border: 3px solid blue; 
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /
+  }
+  
+  @media (max-width: 500px) {
+    body {
+        padding: 10px; 
+    }
+
+    .map-container {
+        height: 250px; 
+    }
+
+.responsive-iframe {
+    width: 100%; 
+    height: 0; 
+    padding-bottom: 56.25%; 
+    position: relative; 
 }
 
-/* Container for the map */
-.map-container {
+
+.responsive-iframe iframe {
+    position: center; 
+    top: 0; 
+    left: 0; 
+    width: 80%; 
+    height: 100%; 
+    border: none; 
+}
+
+            .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+        }
+        
+h2 {
+    background-color: #0ce960;
+}
+
+.video-container {
     position: relative;
-    width: 100%; /* Full width */
-    padding-bottom: 56.25%; /* Maintain a 16:9 Aspect Ratio */
-    height: 0; /* Set height to 0 for padding-bottom to work */
-    overflow: hidden; /* Prevent overflow */
-    max-width: 800px; /* Optional: set a max width for larger screens */
-    margin: 20px auto; /* Center the container */
-    border-radius: 8px; /* Rounded corners for aesthetics */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow */
+    width: 100%; 
+    padding-top: 56.25%; 
+    margin: 0 auto; 
+    max-width: 600px;
+    overflow: hidden; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
-/* Style for iframe to take full space */
-#map-frame {
+.iframe-video {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    border: none; /* Remove the default border */
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .map-container {
-        padding-bottom: 75%; /* Adjust for taller aspect ratio on mobile if needed */
-    }
-}
- 
-.container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    width: 100%;
-    background-color: #e9ecef;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 1rem 0;
-}
+    width: 100%; 
+    height: 100%; 
+   
+} }
