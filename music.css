@@ -198,7 +198,7 @@ footer {
         font-size: 16px; /* Smaller font size for mobile */
     }
 }
-
+  <style>
  body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -234,3 +234,4 @@ footer {
                 padding-bottom: 75%; /* Adjust for taller aspect ratio on mobile if needed */
             }
         }
+</style>
