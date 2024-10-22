@@ -198,3 +198,39 @@ footer {
         font-size: 16px; /* Smaller font size for mobile */
     }
 }
+
+ body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light background for contrast */
+        }
+
+        /* Responsive iframe container */
+        .map-container {
+            position: relative;
+            width: 100%; /* Full width */
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0; /* Set height to 0 for padding-bottom to work */
+            overflow: hidden; /* Prevent overflow */
+            max-width: 800px; /* Optional: set a max width for larger screens */
+            margin: 20px auto; /* Center the container */
+            border-radius: 8px; /* Rounded corners for aesthetics */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow */
+        }
+
+        /* Style for iframe to take full space */
+        #map-frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none; /* Remove the default border */
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .map-container {
+                padding-bottom: 75%; /* Adjust for taller aspect ratio on mobile if needed */
+            }
+        }
