@@ -200,6 +200,29 @@
                                 allowfullscreen="" 
                                 loading="lazy" 
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
+       <style>
+        /* Styles for the map container */
+        .map-container {
+            max-width: 800px; /* Set the maximum width for desktop */
+            margin: 0 auto; /* Center the map on the page */
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0; /* Height set to 0 to allow padding-bottom to set the height */
+            overflow: hidden;
+        }
+
+        /* Style for the iframe to fill the container */
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            border: 0; /* Remove the default border */
+        }
+    </style>
+</head>
+<body>
         </div>
                 </body>
                 </html>
