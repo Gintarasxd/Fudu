@@ -1,30 +1,71 @@
-<!DOCTYPE html>
+
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burger Menu and Lentvaris Example</title>
     <link rel="stylesheet" href="music.css">
+     <title>Responsive YouTube Video</title>
     <style>
-        /* General styles */
+        /* General styles for body */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Responsive iframe container */
+        .iframe-container {
+            position: relative;
+            width: 100%; /* Full width */
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio (height is 56.25% of width) */
+            height: 0;
+            overflow: hidden;
+            margin: 20px 0;
+            max-width: 800px; /* Set a max width for larger screens */
+            margin: 0 auto; /* Center the container */
+        }
+
+        /* Style for iframe to take full space */
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none; /* Remove the default border */
+        }
+
+        /* Media queries for small screens */
+        @media (max-width: 768px) {
+            .iframe-container {
+                padding-bottom: 56.25%; /* Keep the same aspect ratio */
+                max-width: 100%; /* Allow the iframe to take full width on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <style>
+        /* General styles */
+        body {
             background-image: url('https://lt2.pigugroup.eu/colours/390/786/88/39078688/delione-clementoni-high-quality-collection-ruduo-31820-kaina_reference.jpg');
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            font-size: 16px;
-        }
-
-        /* Responsive images */
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
         header {
@@ -65,7 +106,7 @@
 
         /* Burger menu styles */
         .burger-menu {
-            display: none;
+            display: none; 
             flex-direction: column;
             justify-content: space-between;
             width: 30px;
@@ -80,66 +121,10 @@
             border-radius: 2px;
         }
 
-        /* Scroll to Top button styles */
-        #scrollToTopBtn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none;
-            background-color: green;
-            color: white;
-            border: none;
-            padding: 15px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 18px;
-            z-index: 1000;
-        }
-
-        #scrollToTopBtn:hover {
-            background-color: #555;
-        }
-
+        /* Responsive styles */
         @media (max-width: 768px) {
-            #scrollToTopBtn {
-                width: 40px;
-                height: 40px;
-                font-size: 16px;
-            }
-        }
-
-        /* Responsive iframe container */
-        .iframe-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            margin: 20px 0;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                font-size: 14px;
-            }
-
-            header h1 {
-                font-size: 18px;
-            }
-
             nav ul {
-                display: none;
+                display: none; /* Hide the menu by default in mobile view */
                 flex-direction: column;
                 gap: 1rem;
                 position: absolute;
@@ -155,12 +140,12 @@
 
             nav.active ul {
                 display: flex;
-                transform: translateX(0);
+                transform: translateX(0); /* Slide in the menu */
             }
 
             .burger-menu {
                 display: flex;
-                position: fixed;
+                position: absolute;
                 top: 20px;
                 right: 20px;
                 z-index: 10;
@@ -188,15 +173,17 @@
 </header>
 
 <section id="about">
+    
     <h2>Apie Lentvarį</h2>
     <div class="container">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Lentvaris_Palace_in_the_19th_century.jpg" alt="Lentvaris Palace">
-        <p>Lentvaris yra gražus miestelis Lietuvoje, garsėjantis vaizdingais kraštovaizdžiais ir turtinga istorija.</p>
-    </div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Lentvaris_Palace_in_the_19th_century.jpg" alt="Lentvaris Palace">
+    <p>Lentvaris yra gražus miestelis Lietuvoje, garsėjantis vaizdingais kraštovaizdžiais ir turtinga istorija.</p>
 </section>
 
 <section id="history">
     <h2>Istorija</h2>
+    <div class="container">
+
     <div class="iframe-container">
         <iframe src="https://www.youtube.com/embed/WEkhgkidGRo?si=RdsuWdz9ONoJbHwL" title="Lentvaris Video" allowfullscreen></iframe>
     </div>
@@ -211,6 +198,90 @@
 <section id="contact">
     <h2>Lokacija</h2>
     <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18468.306298222666!2d25.0227055!3d54.647348!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ddf2a5684cd7bd%3A0xa00d18ec9ba8130!2sLentvaris%2C%20Trak%C5%B3%20r.%20sav.!5e0!3m2!1slt!2slt!4v1729340148138!5m2!1slt!2slt" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Lentvaris. All rights reserved.</p>
+</footer>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 2000px; /* Just for demonstration purposes */
+        }
+
+        /* Scroll to Top button styles */
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none; /* Initially hidden */
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            z-index: 1000; /* Ensure it stays above other content */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #555; /* Darker shade on hover */
+        }
+
+        /* Media query for mobile */
+        @media (max-width: 768px) {
+            #scrollToTopBtn {
+                padding: 10px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+  
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // Get the button
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        // Show the button when the user scrolls down 300px
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to the top smoothly
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+<script>
+    const burgerMenu = document.getElementById('burger-menu');
+    const nav = document.querySelector('nav');
+
+    burgerMenu.addEventListener('click', function() {
+        nav.classList.toggle('active'); // Toggle the menu visibility on click
+    });
+</script>
+
+</body>
+</html>
 
 
