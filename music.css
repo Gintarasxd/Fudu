@@ -119,7 +119,7 @@ footer {
 
 /* Change background color on hover */
 #scrollToTopBtn:hover {
-    background-color: #555; /* Darker background on hover */
+    background-color: green; /* Darker background on hover */
 }
 
 /* Media query for mobile responsiveness */
