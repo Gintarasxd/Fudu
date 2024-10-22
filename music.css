@@ -40,6 +40,16 @@ nav ul li a {
     box-sizing: border-box; /* Ensures padding doesn't increase container width */
 }
 
+.container {
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Less padding for small screens */
+    }
+}
+
 
 
 
