@@ -1,12 +1,10 @@
-
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lentvaris</title>
-    <link rel="stylesheet" href="music.css">
-    <title>Image Background</title>
+    <link rel="stylesheet" href="saitas.css">
     <style>
         body {
             background-image: url('https://lt2.pigugroup.eu/colours/390/786/88/39078688/delione-clementoni-high-quality-collection-ruduo-31820-kaina_reference.jpg');
@@ -14,11 +12,101 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2 {
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #f4f4f4;
+        }
+
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .iframe-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .map-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 768px) {
+            .map-container iframe {
+                width: 100%;
+                height: 300px;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 5px;
+            }
         }
     </style>
 </head>
 <body>
-    
+
       
     <script>
         function showAlert() {
@@ -47,25 +135,26 @@
             </ul>
         </nav>
     </header>
-   
-        <section id="about">
+
+    <section id="about">
             
-            <h2>Apie Lentvari</h2>
+        <h2>Apie Lentvari</h2>
             <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Lentvaris_Palace_in_the_19th_century.jpg" alt="">
             <div class="container">
-            <p>Lentvaris yra gražus miestelis Lietuvoje, garsėjantis vaizdingais kraštovaizdžiais ir turtinga istorija.</p>
-            <button onclick="showAlert()">Click me!</button>
-        </section>
-        <section id="history">
+        <p>Lentvaris yra gražus miestelis Lietuvoje, garsėjantis vaizdingais kraštovaizdžiais ir turtinga istorija.</p>
+        <button onclick="showAlert()">Click me!</button>
+    </section>
+
+    <section id="history">
             <title>YouTube Video Embed</title>
            <p>Lentvaris video</p>
  
 </head>
 <body>
 
-    <div class="iframe-container">
+        <div class="iframe-container">
         <iframe id="video-frame" src="https://www.youtube.com/embed/WEkhgkidGRo?si=RdsuWdz9ONoJbHwL" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+        </div>
 
 </body>
 </html>
@@ -74,92 +163,71 @@
                 <p>Iki XIX a. Lentvaris arba Landvarovo buvo nedidelis kaimas. 1596 m. minimas Lentvoriškių dvaras.
 
                     1838 m. Lentvario kaime buvo 14 kiemų. Miestelis pradėjo augti, kai pro jį buvo 1861–1862 m. nutiesta Sankt Peterburgo-Varšuvos geležinkelio atšaka į Virbalį ir pastatyta aukščiausios klasės stotis su specialiomis salėmis ir apartamentais carui. Išsiplėtė geležinkelininkų miestelis, pastatyta Lentvario geležinkelio stotis. 1862 m. gruodį pradėtas traukinių eismas. Geležinkelio atsiradimas paskatino smulkių gamyklėlių ir amatininkų dirbtuvių atsiradimą. Miestelyje pagyvėjo prekyba. Grafo Juzefo Tiškevičiaus iniciatyva pastatytas vinių fabrikas, kurio produkcija turėjo didelę paklausą. Gyvenvietėje buvo pastatyti namai, kuriuose apgyvendinti geležinkelio darbininkai ir konduktoriai (pirmoji šios gyvenvietės gatvė ir pavadinta Konduktorių). Augo gyventojų skaičius, atsirado būtinybė įsteigti mokyklą.</p>
-        </section>
-        <section id="gallery">
+    </section>
+
+    <section id="gallery">
             <h2>Gallery</h2>
             <p>Nuotrauku galerija </p>
             <p>Lentvario Ezeras </p>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Image-Lithuania_Lentvaris_Lake_and_Palace.jpg/1280px-Image-Lithuania_Lentvaris_Lake_and_Palace.jpg" alt="">
         <p>Gelezinkelio gatve</p>
         <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Lentvariogelezinkeliogatve.JPG" alt="">
-        </section>
+    </section>
         <p>Lentvario Dvaras</p>
         <img src="https://s1.15min.lt/static/cache/OTcweDU4MCw4MzR4NTQwLDYxNjI0NixvcmlnaW5hbCwsaWQ9MTI1NzMwMCZkYXRlPTIwMTQlMkYxMSUyRjEzLDM1MzkyNDkxNjY=/lentvario-dvaras-kestutis-fedirka-54645f1212816.jpg" alt="">
-        <section id="contact">
+    <section id="contact">
             <div class="container">
-            <h2>Lokacija</h2>
+        <h2>Lokacija</h2>
             <p>Get in touch with us to learn more about Lentvaris...</p>
             <styles>
 
-              
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Google Map Embed</title>
+                    <style>
+                      
+                       
 
+                    </style>
+                </head>
+                <body>
+                   
+        <div class="map-container">
+                        <iframe id="map-frame" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18468.306298222666!2d25.0227055!3d54.647348!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ddf2a5684cd7bd%3A0xa00d18ec9ba8130!2sLentvaris%2C%20Trak%C5%B3%20r.%20sav.!5e0!3m2!1slt!2slt!4v1729340148138!5m2!1slt!2slt" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+                </body>
+                </html>
 
-        <section id="history">
+            </style>
+    </main>
+    <footer>
+        <p>&copy; 2024 Lentvaris. All rights reserved.</p>
+    </footer>
 
-            <title>YouTube Video Embed</title>
+    <button onclick="scrollToTop()" id="scrollToTopBtn">Up</button>
 
-           <p>Lentvaris video</p>
+    <script>
+        function showAlert() {
+            alert('Sveiki atvykę į puslapį apie Lentvarį!');
+        }
 
- 
-
-</head>
-
-<body>
-
-
-
-    <div class="iframe-container">
-
-        <iframe id="video-frame" src="https://www.youtube.com/embed/WEkhgkidGRo?si=RdsuWdz9ONoJbHwL" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-    </div>
-
-
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 
 </body>
-
-</html>
-
-            <p>Istorija
-
-            <div class="container">
-
-                <p>Iki XIX a. Lentvaris arba Landvarovo buvo nedidelis kaimas. 1596 m. minimas Lentvoriškių dvaras.
-
-
-
-                    1838 m. Lentvario kaime buvo 14 kiemų. Miestelis pradėjo augti, kai pro jį buvo 1861–1862 m. nutiesta Sankt Peterburgo-Varšuvos geležinkelio atšaka į Virbalį ir pastatyta aukščiausios klasės stotis su specialiomis salėmis ir apartamentais carui. Išsiplėtė geležinkelininkų miestelis, pastatyta Lentvario geležinkelio stotis. 1862 m. gruodį pradėtas traukinių eismas. Geležinkelio atsiradimas paskatino smulkių gamyklėlių ir amatininkų dirbtuvių atsiradimą. Miestelyje pagyvėjo prekyba. Grafo Juzefo Tiškevičiaus iniciatyva pastatytas vinių fabrikas, kurio produkcija turėjo didelę paklausą. Gyvenvietėje buvo pastatyti namai, kuriuose apgyvendinti geležinkelio darbininkai ir konduktoriai (pirmoji šios gyvenvietės gatvė ir pavadinta Konduktorių). Augo gyventojų skaičius, atsirado būtinybė įsteigti mokyklą.</p>
-
-        </section>
-
-        <section id="gallery">
-
-            <h2>Gallery</h2>
-
-            <p>Nuotrauku galerija </p>
-
-            <p>Lentvario Ezeras </p>
-
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Image-Lithuania_Lentvaris_Lake_and_Palace.jpg/1280px-Image-Lithuania_Lentvaris_Lake_and_Palace.jpg" alt="">
-
-        <p>Gelezinkelio gatve</p>
-
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Lentvariogelezinkeliogatve.JPG" alt="">
-
-        </section>
-
-        <p>Lentvario Dvaras</p>
-
-        <img src="https://s1.15min.lt/static/cache/OTcweDU4MCw4MzR4NTQwLDYxNjI0NixvcmlnaW5hbCwsaWQ9MTI1NzMwMCZkYXRlPTIwMTQlMkYxMSUyRjEzLDM1MzkyNDkxNjY=/lentvario-dvaras-kestutis-fedirka-54645f1212816.jpg" alt="">
-
-        <section id="contact">
-
-            <div class="container">
-
-            <h2>Lokacija</h2>
-
-            <p>Get in touch with us to learn more about Lentvaris...</p>
-
-            <styles>
+</html>        </style>
+                </head>
+                <body>   
+                   
+                    </body>
+                </html>
 
 
