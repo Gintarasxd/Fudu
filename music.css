@@ -98,4 +98,34 @@ footer {
     padding: 1rem;
     background-color: rgba(51, 51, 51, 0.5);
     color: white;
-}h
+}
+
+/* Scroll to Top button styles */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Hidden initially */
+    background-color: #333; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 15px; /* Padding inside the button */
+    border-radius: 50%; /* Circular button shape */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 18px; /* Font size for the text */
+    z-index: 1000; /* Keeps the button on top of other elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a 3D effect */
+}
+
+/* Change background color on hover */
+#scrollToTopBtn:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    #scrollToTopBtn {
+        padding: 10px; /* Smaller padding for mobile devices */
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+}
